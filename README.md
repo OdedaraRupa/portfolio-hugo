@@ -1,2 +1,2 @@
 # portfolio-hugo
-New Latest poerfolio
+New Latest portfolio
