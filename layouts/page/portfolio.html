@@ -1,4 +1,5 @@
 {{ define "main"}}
+<!-- 1920 * 1280 -->
 <!-- ========== Header ========== -->
 <header
   class="header-page v-dark-head pixel-header-animation pb-80 pt-section p-relative"
@@ -17,9 +18,9 @@
 
         <div class="contact-links w-50 mt-20">
           <p>
-            My creative spirit comes alive in the digital realm. With nimble
-            fingers flying across the keyboard, I craft clear experiences out of
-            nothing but ones and zeroes.
+            My creativity thrives in the digital world, where my swift
+            keystrokes transform mere ones and zeroes into seamless, engaging
+            experiences.
           </p>
         </div>
       </div>
@@ -29,7 +30,7 @@
   <div class="footer-head w-100 p-relative mt-80 z-index-2">
     <div class="container d-flex justify-content-between">
       <div class="pixel-btn pixel-btn-shape rotate-icon d-flex">
-        <a class="button v-dark background-section" href="#">
+        <a class="button v-dark background-theme" href="#">
           <span
             class="title-btn text-upper p-relative z-index-1 heading-color"
             data-animate-text="Scroll Down"
@@ -38,7 +39,7 @@
           </span>
         </a>
 
-        <span class="icon v-dark background-section">
+        <span class="icon v-dark background-theme">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
             <path
               d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"
@@ -50,20 +51,35 @@
       <div class="social-box d-flex align-items-center">
         <ul class="pixel-socials box-social">
           <li>
-            <a href="#0" target="_blank" class="background-main">
+            <a
+              href="https://www.facebook.com/rupa.odedara"
+              target="_blank"
+              class="background-section"
+            >
               <i class="fab fa-facebook-f" aria-hidden="true"></i>
               <span>FB</span>
             </a>
           </li>
+
           <li>
-            <a href="#0" target="_blank" class="background-main">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
-              <span>IN</span>
+            <a
+              href="https://github.com/OdedaraRupa"
+              target="_blank"
+              class="background-section"
+            >
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <span>GIT</span>
             </a>
           </li>
+
           <li>
-            <a href="#0" target="_blank" class="background-main">
-              <i class="fab fa-twitter" aria-hidden="true"></i> <span>TW</span>
+            <a
+              href="https://www.linkedin.com/in/rupaben-odedara/"
+              target="_blank"
+              class="background-section"
+            >
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <span>LN</span>
             </a>
           </li>
         </ul>
@@ -84,41 +100,56 @@
           <div class="filtering-t w-100">
             <div class="filtering-wrap w-100">
               <div class="filtering w-100">
-                <div class="container">
-                  <button class="active" data-filter="*" type="button">
+                <div class="container ">
+                  
+                  <button class="active custom-button background-theme" data-filter="*" type="button">
                     All
                   </button>
                   <button
                     type="button"
-                    class="pixel-filter-category-production"
-                    data-filter=".brand , .category-brand"
+                    class="pixel-filter-category-production custom-button background-theme"
+                    data-filter=".business , .category-business"
                   >
-                    Brand
+                  Business
                   </button>
                   <button
                     type="button"
-                    class="pixel-filter-category-photography"
-                    data-filter=".photography , .category-photography"
+                    class="pixel-filter-category-photography custom-button background-theme"
+                    data-filter=".educational , .category-educational"
                   >
-                    Photography
+                  Educational
                   </button>
                   <button
                     type="button"
-                    class="sm-title-block pixel-filter-category-creative"
-                    data-filter=".sports , .category-sports"
+                    class="sm-title-block pixel-filter-category-creative custom-button background-theme"
+                    data-filter=".e-Commerce , .category-e-Commerce"
                   >
-                    Sports
+                  E-Commerce
                   </button>
                   <button
                     type="button"
-                    class="sm-title-block pixel-filter-category-creative"
-                    data-filter=".fashion , .category-fashion"
+                    class="sm-title-block pixel-filter-category-photography custom-button background-theme"
+                    data-filter=".technology , .category-technology"
                   >
-                    Fashion
+                  Technology
+                  </button>
+                  <button
+                  type="button"
+                  class="sm-title-block pixel-filter-category-creative custom-button background-theme"
+                  data-filter=".portfolio , .category-portfolio"
+                >
+                 Portfolio
+                  </button>
+                  <button
+                  type="button"
+                  class="sm-title-block pixel-filter-category-production custom-button background-theme"
+                  data-filter=".development , .category-development"
+                >
+                  Development
                   </button>
                 </div>
               </div>
-            </div>
+            </div> 
           </div>
         </div>
 
@@ -127,9 +158,8 @@
             class="pixel-posts hover-box-item d-grid grid-md-2 pixel-isotope use-filter v-dark-head"
             data-pixel-gap="30px"
           >
-            <article
-              class="pixel-item-post grid-item over-hidden p-relative has-border-radius brand sports"
-            >
+            {{ range .Params.portfolio_article }}
+            <article class='pixel-item-post grid-item over-hidden p-relative has-border-radius {{ .categories }}'>
               <div class="box-content d-flex">
                 <div class="img-cat w-100">
                   <div
@@ -137,7 +167,7 @@
                     data-overlay="7"
                   >
                     <img
-                      src="/img/portfolio/project1/1.jpg"
+                      src="{{ .image}}"
                       class="cover-bg-img pixel-swiper-parallax-transform"
                       alt=""
                     />
@@ -172,12 +202,11 @@
                         d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
                       ></path>
                     </svg>
-                    <span class="background-section heading-color"
-                      >UX / UI Design</span
-                    >
-                    <span class="background-section heading-color"
-                      >Architecture</span
-                    >
+                    {{ range .tools}}
+                      <span class="background-section heading-color">{{ . }}</span>
+                    {{ end }}
+                   
+                   
                   </div>
                 </div>
 
@@ -187,11 +216,9 @@
                   <div class="post-info">
                     <h2 class="post-title word-wrap d-inline-block title-block">
                       <a
-                        href="project-1.html"
+                        href="{{ .link }}"
                         class="effect-ajax init-color"
-                        data-pixel-ajax="work"
-                        >Binge x <br />
-                        The Iconic <span class="fw-200">© 2021</span></a
+                        data-pixel-ajax="work"> {{ .title | safeHTML}}</a
                       >
                     </h2>
                   </div>
@@ -199,437 +226,10 @@
               </div>
             </article>
 
-            <article
-              class="pixel-item-post grid-item over-hidden p-relative has-border-radius fashion sports"
-            >
-              <div class="box-content d-flex">
-                <div class="img-cat w-100">
-                  <div
-                    class="box-image-bg w-100 over-hidden h-350 before-z-index pixel-swiper-parallax-transform p-relative"
-                    data-overlay="5"
-                  >
-                    <img
-                      src="/img/portfolio/project2/1.jpg"
-                      class="cover-bg-img pixel-swiper-parallax-transform"
-                      alt=""
-                    />
-                  </div>
+            {{ end }}
+           
 
-                  <div
-                    class="cat background-main d-flex p-absolute top-0 right-0 z-index-1"
-                  >
-                    <svg
-                      class="top-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <svg
-                      class="bottom-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <span class="background-section heading-color"
-                      >Character design
-                    </span>
-                    <span class="background-section heading-color"
-                      >Digital Art
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0"
-                >
-                  <div class="post-info">
-                    <h2 class="post-title word-wrap d-inline-block title-block">
-                      <a
-                        href="project-2.html"
-                        class="effect-ajax init-color"
-                        data-pixel-ajax="work"
-                        >Me <br />
-                        Myself and i <span class="fw-200">© 2024</span></a
-                      >
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="pixel-item-post grid-item over-hidden p-relative has-border-radius photography"
-            >
-              <div class="box-content d-flex">
-                <div class="img-cat w-100">
-                  <div
-                    class="box-image-bg w-100 over-hidden h-350 before-z-index pixel-swiper-parallax-transform p-relative"
-                    data-overlay="3"
-                  >
-                    <img
-                      src="/img/portfolio/project3/1.jpg"
-                      class="cover-bg-img pixel-swiper-parallax-transform"
-                      alt=""
-                    />
-                  </div>
-
-                  <div
-                    class="cat background-main d-flex p-absolute top-0 right-0 z-index-1"
-                  >
-                    <svg
-                      class="top-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <svg
-                      class="bottom-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <span class="background-section heading-color"
-                      >Photography
-                    </span>
-                    <span class="background-section heading-color"
-                      >branding
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0"
-                >
-                  <div class="post-info">
-                    <h2 class="post-title word-wrap d-inline-block title-block">
-                      <a
-                        href="project-3.html"
-                        class="effect-ajax init-color"
-                        data-pixel-ajax="work"
-                        >YOUR <br />
-                        DREAM CAR <span class="fw-200">© 2024</span></a
-                      >
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="pixel-item-post grid-item over-hidden p-relative has-border-radius brand fashion"
-            >
-              <div class="box-content d-flex">
-                <div class="img-cat w-100">
-                  <div
-                    class="box-image-bg w-100 over-hidden h-350 before-z-index pixel-swiper-parallax-transform p-relative"
-                    data-overlay="6"
-                  >
-                    <img
-                      src="/img/portfolio/project4/1.jpg"
-                      class="cover-bg-img pixel-swiper-parallax-transform"
-                      alt=""
-                    />
-                  </div>
-
-                  <div
-                    class="cat background-main d-flex p-absolute top-0 right-0 z-index-1"
-                  >
-                    <svg
-                      class="top-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <svg
-                      class="bottom-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <span class="background-section heading-color"
-                      >Photography
-                    </span>
-                    <span class="background-section heading-color"
-                      >branding
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0"
-                >
-                  <div class="post-info">
-                    <h2 class="post-title word-wrap d-inline-block title-block">
-                      <a
-                        href="project-4.html"
-                        class="effect-ajax init-color"
-                        data-pixel-ajax="work"
-                        >The <br />
-                        Hills - Nissan <span class="fw-200">© 2019</span></a
-                      >
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="pixel-item-post grid-item over-hidden p-relative has-border-radius sports photography"
-            >
-              <div class="box-content d-flex">
-                <div class="img-cat w-100">
-                  <div
-                    class="box-image-bg w-100 over-hidden h-350 before-z-index pixel-swiper-parallax-transform p-relative"
-                    data-overlay="6"
-                  >
-                    <img
-                      src="/img/portfolio/project5/1.jpg"
-                      class="cover-bg-img pixel-swiper-parallax-transform"
-                      alt=""
-                    />
-                  </div>
-
-                  <div
-                    class="cat background-main d-flex p-absolute top-0 right-0 z-index-1"
-                  >
-                    <svg
-                      class="top-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <svg
-                      class="bottom-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <span class="background-section heading-color"
-                      >Photography
-                    </span>
-                    <span class="background-section heading-color"
-                      >Architecture
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0"
-                >
-                  <div class="post-info">
-                    <h2 class="post-title word-wrap d-inline-block title-block">
-                      <a
-                        href="project-5.html"
-                        class="effect-ajax init-color"
-                        data-pixel-ajax="work"
-                        >Church <br />
-                        Copenhagen Denmark</a
-                      >
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="pixel-item-post grid-item over-hidden p-relative has-border-radius fashion"
-            >
-              <div class="box-content d-flex">
-                <div class="img-cat w-100">
-                  <div
-                    class="box-image-bg w-100 over-hidden h-350 before-z-index pixel-swiper-parallax-transform p-relative"
-                    data-overlay="5"
-                  >
-                    <img
-                      src="/img/portfolio/project6/1.jpg"
-                      class="cover-bg-img pixel-swiper-parallax-transform"
-                      alt=""
-                    />
-                  </div>
-
-                  <div
-                    class="cat background-main d-flex p-absolute top-0 right-0 z-index-1"
-                  >
-                    <svg
-                      class="top-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <svg
-                      class="bottom-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <span class="background-section heading-color"
-                      >Photography
-                    </span>
-                    <span class="background-section heading-color"
-                      >Architecture
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0"
-                >
-                  <div class="post-info">
-                    <h2 class="post-title word-wrap d-inline-block title-block">
-                      <a
-                        href="project-6.html"
-                        class="effect-ajax init-color"
-                        data-pixel-ajax="work"
-                        >LOST <br />
-                        RENDER <span class="fw-200">© 2023</span></a
-                      >
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article
-              class="pixel-item-post grid-item over-hidden p-relative has-border-radius brand photography"
-            >
-              <div class="box-content d-flex">
-                <div class="img-cat w-100">
-                  <div
-                    class="box-image-bg w-100 over-hidden h-350 before-z-index pixel-swiper-parallax-transform p-relative"
-                    data-overlay="4"
-                  >
-                    <img
-                      src="/img/portfolio/project7/1.jpg"
-                      class="cover-bg-img pixel-swiper-parallax-transform"
-                      alt=""
-                    />
-                  </div>
-
-                  <div
-                    class="cat background-main d-flex p-absolute top-0 right-0 z-index-1"
-                  >
-                    <svg
-                      class="top-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <svg
-                      class="bottom-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
-                    </svg>
-                    <span class="background-section heading-color"
-                      >Architecture
-                    </span>
-                    <span class="background-section heading-color"
-                      >Interior Design
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0"
-                >
-                  <div class="post-info">
-                    <h2 class="post-title word-wrap d-inline-block title-block">
-                      <a
-                        href="project-7.html"
-                        class="effect-ajax init-color"
-                        data-pixel-ajax="work"
-                        >Samokat <br />
-                        office <span class="fw-200">© 2021</span></a
-                      >
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </article>
+           
           </div>
         </div>
       </div>
