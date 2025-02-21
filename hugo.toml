@@ -1,0 +1,32 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+[params]
+  customSCSS = ["css/_main.scss"]
+
+# main menu
+
+[menu]
+    ## Menu bar
+    [[menu.main]]
+      url = "/"
+      name = "Home"
+      weight = 1
+
+    [[menu.main]]
+      url = "/about/"
+      name = "About"
+      weight = 2
+
+    [[menu.main]]
+      url = "/contact/"
+      name = "Contact"
+      weight = 3
+
+    [[menu.main]]
+      url = "/portfolio/"
+      name = "Portfolio"
+      weight = 4
+
+   
