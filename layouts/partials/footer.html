@@ -71,7 +71,7 @@
         </h4>
 
         <div class="col-contact">
-          <p><strong>T</strong> : +001 225 3351</p>
+         
           <p class="over-hidden mt-10">
             <strong>E</strong> :
             <a
@@ -79,6 +79,15 @@
               href="#"
               data-hover-text="mailto:rupaben.odedara@gmail.com"
               >rupaben.odedara@gmail.com</a
+            >
+          </p>
+          <p class="over-hidden mt-10">
+            <strong>E</strong> :
+            <a
+              class="link-hover"
+              href="#"
+              data-hover-text="mailto:rupaben.odedara@gmail.com"
+              >odedararupa35@gmail.com</a
             >
           </p>
         </div>
@@ -128,7 +137,7 @@
 
   <div class="copyright background-main">
     <div class="container d-flex align-items-center justify-content-between">
-      <p>Copyright © 2025 <a href="#">pixelGrid</a></p>
+      <p>©  <span id="year" ></span> Designed by Rupaben Odedara <a href="#">pixelGrid</a></p>
 
       <div class="pixel-default-btn pixel-icon-heading-color">
         <a
@@ -170,3 +179,7 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.querySelector("#year").innerHTML = (new Date()).getFullYear();
+</script>
