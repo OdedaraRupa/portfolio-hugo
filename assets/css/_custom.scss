@@ -85,6 +85,18 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+// Filter Gallary
+.custom-button{
+  padding: 8px 15px 8px 15px;
+  border-radius: 30px;
+  background-color: #31404d;
+}
+.filtering-t .filtering-wrap .filtering button:not(:last-of-type):after{
+  content: unset;
+}
+.filtering-t .filtering-wrap .filtering button.active{
+  background-color: #0c7ad1;
+  color: #fff;
+}
 /* background: linear-gradient(318deg, #1e1111 10%, #839d47 50%, #738d35 40%, var(--bg-color) 89%); */
 /* background: linear-gradient(318deg, #331111 10%, #d1d857 50%, #bee26a 40%, #040404 89%); */
