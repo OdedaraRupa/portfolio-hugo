@@ -540,7 +540,7 @@ body:not(.pixel-cursor-effect) #pixel_cursor, body:not(.pixel-cursor-effect) #pi
 }
 
 .bg-pattern {
-  background-image: url("../img/dotted.svg");
+  background-image: url("/img/dotted.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -554,7 +554,7 @@ body:not(.pixel-cursor-effect) #pixel_cursor, body:not(.pixel-cursor-effect) #pi
   height: 100%;
   right: 0;
   bottom: 0;
-  background-image: url("../img/shap-line.svg");
+  background-image: url("/img/shap-line.svg");
   background-position: bottom right;
   background-repeat: no-repeat;
   opacity: 0.6;
@@ -633,7 +633,7 @@ pixel-bg-pattern bg-square
   background-image: linear-gradient(to right, var(--border-color) 1px, transparent 1px), linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
 }
 .pixel-bg-pattern.bg-line:before {
-  background-image: url("../img/bg-line.html");
+  background-image: url("/img/bg-line.html");
   background-repeat: no-repeat;
   opacity: var(--bg-opacity, 0.5);
 }
@@ -647,7 +647,7 @@ pixel-bg-pattern bg-square
 }
 
 .bg-arc {
-  background-image: url("../img/bg-arc.html");
+  background-image: url("/img/bg-arc.html");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1606,7 +1606,7 @@ a:hover, a:active {
 .site-header.pixel-hamburger .container-content:after {
   content: "";
   position: absolute;
-  background-image: url(../img/pngtree-dotted.png);
+  background-image: url(/img/pngtree-dotted.png);
   background-color: var(--border-color);
   opacity: 0.07;
 }
@@ -6202,12 +6202,12 @@ ul.intro-project-list li h5.title-list-project + p.description-list-project {
           mask-size: cover;
 }
 .pixel-brand .box-title .item:first-of-type {
-  -webkit-mask-image: url(../img/shape-awards.svg);
-          mask-image: url(../img/shape-awards.svg);
+  -webkit-mask-image: url(/img/shape-awards.svg);
+          mask-image: url(/img/shape-awards.svg);
 }
 .pixel-brand .box-title .item:last-of-type {
-  -webkit-mask-image: url(../img/shape-awards2.svg);
-          mask-image: url(../img/shape-awards2.svg);
+  -webkit-mask-image: url(/img/shape-awards2.svg);
+          mask-image: url(/img/shape-awards2.svg);
 }
 @media only screen and (max-width: 767px) {
   .pixel-brand .box-title .item {
@@ -6460,7 +6460,7 @@ ul.intro-project-list li h5.title-list-project + p.description-list-project {
   height: 100%;
 }
 .pixel-skills-item .bar-progress .fill:not(.background-section):not(.background-main):not(.background-theme):not(.background-heading) {
-  background-image: url("../img/patterns.html");
+  background-image: url("/img/patterns.html");
 }
 .pixel-skills-item .bar-progress .fill.background-heading {
   background-color: var(--heading-color);

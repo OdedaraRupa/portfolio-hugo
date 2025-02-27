@@ -403,13 +403,6 @@ h6,
   font-size: var(--font-size-h6);
 }
 
-.pixel-heading-title:not(.ah-headline) {
-  vertical-align: middle;
-}
-.pixel-heading-title:not(.ah-headline) span:not(.animate-number),
-.pixel-heading-title:not(.ah-headline) p:not(.animate-number) {
-  line-height: var(--line-height-base);
-}
 
 .heading h3 {
   font-size: 60px;
@@ -2768,9 +2761,7 @@ a:focus {
   padding-bottom: 30px;
 }
 
-.fancybox__thumbs .carousel__slide:not(:last-child) {
-  margin-right: 10px;
-}
+
 
 [data-fancybox] {
   cursor: pointer;
