@@ -1,397 +1,269 @@
 {{ define "main" }}
 
 
-  <!-- ========== Header ========== -->
-  <header
-    id="pixel_header"
-    class="header-personal v-dark-head pixel-header-animation h-100-v pixel-header-animation"
-  >
-    <div class="bg-gradient p-absolute w-100 h-100 top-0 left-0"></div>
-    <div class="p-relative pixel-hero-parallax-title h-100-v d-flex z-index-1">
-      <div
-        class="p-relative d-flex flex-column justify-content-center w-100 h-100"
-      >
-        <div
-          class="box-content d-flex flex-column z-index-1 align-items-center text-center pixel-container"
-        >
-          <div id="hero_title">
-            <h5 class="sub-heading">Hey — I'm</h5>
-            <div class="box-img z-index-1 w-100 text-center"></div>
-            <h1
-              class="ah-headline title-lg clip is-full-width text-upper d-flex justify-content-center"
-            >
-              Rupa Odedara
-            </h1>
-            <p class="text-center text-align-center">
-              A digital designer with a passion for transforming ideas into
-              captivating visual experiences.
-            </p>
+<!-- ========== Header ========== -->
+<header id="pixel_header" class="header-personal v-dark-head pixel-header-animation h-100-v pixel-header-animation">
+  <div class="bg-gradient p-absolute w-100 h-100 top-0 left-0"></div>
+  <div class="p-relative pixel-hero-parallax-title h-100-v d-flex z-index-1">
+    <div class="p-relative d-flex flex-column justify-content-center w-100 h-100">
+      <div class="box-content d-flex flex-column z-index-1 align-items-center text-center pixel-container">
+        <div id="hero_title">
+          <h5 class="sub-heading">Hey — I'm</h5>
+          <div class="box-img z-index-1 w-100 text-center"></div>
+          <h1 class="title-lg clip is-full-width text-upper d-flex justify-content-center">
+            Rupa Odedara
+          </h1>
+          <p class="text-center text-align-center">
+            A digital designer with a passion for transforming ideas into
+            captivating visual experiences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-head w-100 left-0 p-absolute bottom-0 z-index-2 pb-40">
+    <div class="container d-flex justify-content-between">
+      <div class="pixel-btn pixel-btn-shape rotate-icon d-flex">
+        <a class="button background-section background-theme" href="#page_wrapper" rel="nofollow"
+          data-pixel-option='{"ease": "power4.inOut" , "duration" : 1.5}'>
+          <span class="title-btn text-upper p-relative z-index-1 heading-color" data-animate-text="Scroll Down">
+            <span>Scroll Down</span>
+          </span>
+        </a>
+
+        <span class="icon background-theme">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
+          </svg>
+        </span>
+      </div>
+
+      <div class="pixel-btn pixel-btn-shape d-flex">
+        <a class="button background-theme effect-ajax" href="contact.html" data-pixel-text="Contact Mes">
+          <span class="title-btn text-upper p-relative z-index-1 heading-color" data-animate-text="Contact Me">
+            <span>Contact Me</span>
+          </span>
+        </a>
+
+        <span class="icon background-theme">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ========== End Header ========== -->
+
+<div id="page_wrapper" class="wrapper">
+  <!-- ========== About Us ========== -->
+  <section class="about-section section-padding p-relative">
+    <div class="container">
+      <div class="d-grid grid-lg-2">
+        <div class="box-text p-relative">
+          <div class="bg-pattern p-absolute w-100"></div>
+          <h2 class="title mb-30 pixel-fill">
+            <span
+              data-pixel-animation='{"from":{"paddingLeft":"10%"},"to":{"paddingLeft":"20%"},"responsive":["tablet","desktop"]}'>I
+              AM</span>
+            <br />A DEDICATE WEB DEVELOEPR<br />
+          </h2>
+
+          <p class="pixel-up">
+            and design and develop and enhance digital experiences through
+            innovative design, strategic thinking, and seamless functionality
+          </p>
+
+          <div class="pixel-btn pixel-btn-shape mt-30 d-flex">
+            <a class="button background-theme effect-ajax" href="about.html">
+              <span class="title-btn p-relative z-index-1 heading-color" data-animate-text="ABOUT US">
+                <span>ABOUT US</span>
+              </span>
+            </a>
+
+            <span class="icon background-theme">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="corner-box over-hidden">
+          <div class="corner__lb"></div>
+          <div class="box-img h-100 img-box-parallax before-z-index pixel-animate pixel-effect-down"
+            data-pixel-triggerhook="bottom" data-pixel-grid="move-up" data-overlay="0">
+            <img class="cover-bg-img" src="/img/hero.jpg" alt="pixel-image" />
           </div>
         </div>
       </div>
+
+      {{ partial "experience.html" . }}
     </div>
+  </section>
+  <!-- ========== End About Us ========== -->
 
-    <div class="footer-head w-100 left-0 p-absolute bottom-0 z-index-2 pb-40">
-      <div class="container d-flex justify-content-between">
-        <div class="pixel-btn pixel-btn-shape rotate-icon d-flex">
-          <a
-            class="button background-section background-theme"
-            href="#page_wrapper"
-            rel="nofollow"
-            data-pixel-option='{"ease": "power4.inOut" , "duration" : 1.5}'
-          >
-            <span
-              class="title-btn text-upper p-relative z-index-1 heading-color"
-              data-animate-text="Scroll Down"
-            >
-              <span>Scroll Down</span>
-            </span>
-          </a>
+  <!-- ==========  Service ========== -->
+  <!-- ========== Service========== -->
+  <section class="services-lest-hover not-filter pixel-filter p-relative section-margin">
+    <div class="container">
+      <div class="section-title mb-70 d-flex flex-column">
+        <span class="sub-heading mb-10 pixel-fill">My Expertise</span>
 
-          <span class="icon background-theme">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path
-                d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"
-              ></path>
-            </svg>
-          </span>
-        </div>
-
-        <div class="pixel-btn pixel-btn-shape d-flex">
-          <a
-            class="button background-theme effect-ajax"
-            href="contact.html"
-            data-pixel-text="Contact Mes"
-          >
-            <span
-              class="title-btn text-upper p-relative z-index-1 heading-color"
-              data-animate-text="Contact Me"
-            >
-              <span>Contact Me</span>
-            </span>
-          </a>
-
-          <span class="icon background-theme">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path
-                d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"
-              ></path>
-            </svg>
-          </span>
-        </div>
+        <h2 class="title pixel-fill">
+          Discover a Service That<br />
+          Fits Your Needs
+        </h2>
       </div>
     </div>
-  </header>
-  <!-- ========== End Header ========== -->
-
-  <div id="page_wrapper" class="wrapper">
-    <!-- ========== About Us ========== -->
-    <section class="about-section section-padding p-relative">
-      <div class="container">
-        <div class="d-grid grid-lg-2">
-          <div class="box-text p-relative">
-            <div class="bg-pattern p-absolute w-100"></div>
-            <h2 class="title mb-30 pixel-fill">
-              <span
-                data-pixel-animation='{"from":{"paddingLeft":"10%"},"to":{"paddingLeft":"20%"},"responsive":["tablet","desktop"]}'
-                >I AM</span
-              >
-              <br />A DEDICATE WEB DEVELOEPR<br />
+    <div class="container">
+      <div class="pixel-cards">
+        <div class="pixel-posts pixel-style-hover-list pixel-layout-fade-up" data-pixel-fx="2">
+          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
+            data-img="/img/services/frontend.jpg">
+            <h2 class="title">
+              <a href="#" class="effect-ajax">Front-End Development</a>
             </h2>
+            <span class="number">01</span>
+          </div>
 
-            <p class="pixel-up">
-              and design and develop and enhance digital experiences through
-              innovative design, strategic thinking, and seamless functionality
-            </p>
+          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
+            data-img="/img/services/app_development.jpg">
+            <h2 class="title">
+              <a href="#" class="effect-ajax">Web + App Development</a>
+            </h2>
+            <span class="number">02</span>
+          </div>
 
-            <div class="pixel-btn pixel-btn-shape mt-30 d-flex">
-              <a class="button background-theme effect-ajax" href="about.html">
-                <span
-                  class="title-btn p-relative z-index-1 heading-color"
-                  data-animate-text="ABOUT US"
-                >
-                  <span>ABOUT US</span>
-                </span>
+          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
+            data-img="/img/services/user_experience.png">
+            <h2 class="title">
+              <a href="#" class="effect-ajax">User Experience</a>
+            </h2>
+            <span class="number">03</span>
+          </div>
+
+          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
+            data-img="/img/services/javascript.png">
+            <h2 class="title">
+              <a href="#" class="effect-ajax">JavaScript Frameworks</a>
+            </h2>
+            <span class="number">04</span>
+          </div>
+
+          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
+            data-img="/img/services/web_application_security.png">
+            <h2 class="title">
+              <a href="#" class="effect-ajax">Web Security & Best Practices
               </a>
+            </h2>
+            <span class="number">05</span>
+          </div>
 
-              <span class="icon background-theme">
+          <div class="pixel-up d-inline-flex">
+            <div class="pixel-btn pixel-btn-shape d-flex no-padding text-upper">
+              <span class="icon background-main theme-color">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                  <path
-                    d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"
-                  ></path>
+                  <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
                 </svg>
               </span>
             </div>
           </div>
-
-          <div class="corner-box over-hidden">
-            <div class="corner__lb"></div>
-            <div
-              class="box-img h-100 img-box-parallax before-z-index pixel-animate pixel-effect-down"
-              data-pixel-triggerhook="bottom"
-              data-pixel-grid="move-up"
-              data-overlay="0"
-            >
-              <img class="cover-bg-img" src="/img/hero.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="experience d-flex justify-content-between background-section mt-30 d-flex pixel-layout-fade-up"
-        >
-          <div class="facts-inner p-10 d-grid grid-lg-2 gap-10 d-grid-no-space">
-            <div
-              class="fact-item background-main has-border-radius p-30 pixel-up"
-            >
-              <h3 class="title d-flex align-items-start justify-content-center">
-                30+
-                <span class="background-theme p-5 has-border-radius">+</span>
-              </h3>
-              <p
-                class="text-upper mt-20 v-light background-main p-5 text-center heading-color"
-              >
-                Completed Projects
-              </p>
-            </div>
-
-            <div
-              class="fact-item background-main has-border-radius p-30 pixel-up"
-            >
-              <h3 class="title d-flex align-items-start justify-content-center">
-                98
-                <span class="background-theme p-5 has-border-radius">%</span>
-              </h3>
-              <p
-                class="text-upper mt-20 v-light background-main p-5 text-center heading-color"
-              >
-                Client Satisfaction Rate
-              </p>
-            </div>
-          </div>
-
-          <div class="box-video pixel-up v-dark-head">
-            <div
-              class="box-img h-100 w-100 h-100 p-absolute top-0 right-0 pixel-hero-parallax-img before-z-index h-100"
-              data-overlay="5"
-            >
-              <img class="cover-bg-img" src="/img/bg-video.jpg" alt="" />
-            </div>
-            <div class="ex d-flex align-items-end h-100 p-relative z-index-1">
-              <h2 class="title theme-color pixel-animate-number">
-                <span class="animate-number">4</span>
-              </h2>
-              <span class="ml-5 text-upper heading-color"
-                >Years <br />
-                experience</span
-              >
-            </div>
-          </div>
         </div>
       </div>
-    </section>
-    <!-- ========== End About Us ========== -->
+    </div>
+  </section>
+  <!-- ========== End Service========== -->
 
-    <!-- ==========  Service ========== -->
-    <!-- ========== Service========== -->
-    <section
-      class="services-lest-hover not-filter pixel-filter p-relative section-margin"
-    >
-      <div class="container">
-        <div class="section-title mb-70 d-flex flex-column">
-          <span class="sub-heading mb-10 pixel-fill">My Expertise</span>
+  <!-- ==========   Skill ========== -->
+  <div class="background-section section-padding">
+    <div class="container">
+      <div class="d-grid grid-half-1">
+        <div class="box-title d-flex flex-column justify-content-center">
+          <div class="section-title d-flex flex-column">
+            <span class="sub-heading pixel-fill">TOOLS SECTION</span>
 
-          <h2 class="title pixel-fill">
-            Discover a Service That<br />
-            Fits Your Needs
-          </h2>
-        </div>
-      </div>
-      <div class="container">
-        <div class="pixel-cards">
-          <div
-            class="pixel-posts pixel-style-hover-list pixel-layout-fade-up"
-            data-pixel-fx="2"
-          >
-            <div
-              class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-              data-img="/img/services/frontend.jpg"
-            >
-              <h2 class="title">
-                <a href="#" class="effect-ajax">Front-End Development</a>
-              </h2>
-              <span class="number">01</span>
-            </div>
-
-            <div
-              class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-              data-img="/img/services/app_development.jpg"
-            >
-              <h2 class="title">
-                <a href="#" class="effect-ajax">Web + App Development</a>
-              </h2>
-              <span class="number">02</span>
-            </div>
-
-            <div
-              class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-              data-img="/img/services/user_experience.png"
-            >
-              <h2 class="title">
-                <a href="#" class="effect-ajax">User Experience</a>
-              </h2>
-              <span class="number">03</span>
-            </div>
-
-            <div
-              class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-              data-img="/img/services/javascript.png"
-            >
-              <h2 class="title">
-                <a href="#" class="effect-ajax">JavaScript Frameworks</a>
-              </h2>
-              <span class="number">04</span>
-            </div>
-
-            <div
-              class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-              data-img="/img/services/web_application_security.png"
-            >
-              <h2 class="title">
-                <a href="#" class="effect-ajax"
-                  >Web Security & Best Practices
-                </a>
-              </h2>
-              <span class="number">05</span>
-            </div>
-
-            <div class="pixel-up d-inline-flex">
-              <div
-                class="pixel-btn pixel-btn-shape d-flex no-padding text-upper"
-              >
-                <span class="icon background-main theme-color">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path
-                      d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"
-                    ></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
+            <h2 class="title pixel-fill">
+              TOOLS FOR <br />
+              MY CREATIVE WORK
+            </h2>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- ========== End Service========== -->
 
-    <!-- ==========   Skill ========== -->
-    <div class="background-section section-padding">
-      <div class="container">
-        <div class="d-grid grid-half-1">
-          <div class="box-title d-flex flex-column justify-content-center">
-            <div class="section-title d-flex flex-column">
-              <span class="sub-heading pixel-fill">TOOLS SECTION</span>
+        <div class="pixel-skills">
+          <div class="d-grid grid-md-2 pixel-layout-fade-up">
+            <div
+              class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
+              <div class="box-img mr-15 v-dark background-section">
+                <img src="/img/skills/html-5.png" alt="pixel-image" />
+              </div>
 
-              <h2 class="title pixel-fill">
-                TOOLS FOR <br />
-                MY CREATIVE WORK
-              </h2>
+              <div class="skills-inner w-100">
+                <h6 class="pixel-title-award sm-title-block mb-5">HTML</h6>
+
+                <span class="number mb-5">95%</span>
+
+                <div class="bar-progress background-section has-border-radius">
+                  <span class="fill pixel-animate-skill background-heading has-border-radius"
+                    data-pixel-width="95%"></span>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="pixel-skills">
-            <div class="d-grid grid-md-2 pixel-layout-fade-up">
-              <div
-                class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up"
-              >
-                <div class="box-img mr-15 v-dark background-section">
-                  <img src="/img/skills/html-5.png" alt="" />
-                </div>
-
-                <div class="skills-inner w-100">
-                  <h6 class="pixel-title-award sm-title-block mb-5">HTML</h6>
-
-                  <span class="number mb-5">95%</span>
-
-                  <div
-                    class="bar-progress background-section has-border-radius"
-                  >
-                    <span
-                      class="fill pixel-animate-skill background-heading has-border-radius"
-                      data-pixel-width="95%"
-                    ></span>
-                  </div>
-                </div>
+            <div
+              class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
+              <div class="box-img mr-15 v-dark background-section">
+                <img src="/img/skills/css-3.png" alt="pixel-image" />
               </div>
 
-              <div
-                class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up"
-              >
-                <div class="box-img mr-15 v-dark background-section">
-                  <img src="/img/skills/css-3.png" alt="" />
-                </div>
+              <div class="skills-inner w-100">
+                <h6 class="pixel-title-award sm-title-block mb-5">CSS</h6>
 
-                <div class="skills-inner w-100">
-                  <h6 class="pixel-title-award sm-title-block mb-5">CSS</h6>
+                <span class="number mb-5">98%</span>
 
-                  <span class="number mb-5">98%</span>
-
-                  <div
-                    class="bar-progress background-section has-border-radius"
-                  >
-                    <span
-                      class="fill pixel-animate-skill background-heading has-border-radius"
-                      data-pixel-width="98%"
-                    ></span>
-                  </div>
+                <div class="bar-progress background-section has-border-radius">
+                  <span class="fill pixel-animate-skill background-heading has-border-radius"
+                    data-pixel-width="98%"></span>
                 </div>
               </div>
+            </div>
 
-              <div
-                class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up"
-              >
-                <div class="box-img mr-15 v-dark background-section">
-                  <img src="/img/skills/folder.png" alt="" />
-                </div>
-
-                <div class="skills-inner w-100">
-                  <h6 class="pixel-title-award sm-title-block mb-5">
-                    JavaScript
-                  </h6>
-
-                  <span class="number mb-5">92%</span>
-
-                  <div
-                    class="bar-progress background-section has-border-radius"
-                  >
-                    <span
-                      class="fill pixel-animate-skill background-heading has-border-radius"
-                      data-pixel-width="92%"
-                    ></span>
-                  </div>
-                </div>
+            <div
+              class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
+              <div class="box-img mr-15 v-dark background-section">
+                <img src="/img/skills/folder.png" alt="pixel-image" />
               </div>
 
-              <div
-                class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up"
-              >
-                <div class="box-img mr-15 v-dark background-section">
-                  <img src="/img/skills/atom.png" alt="" />
+              <div class="skills-inner w-100">
+                <h6 class="pixel-title-award sm-title-block mb-5">
+                  JavaScript
+                </h6>
+
+                <span class="number mb-5">92%</span>
+
+                <div class="bar-progress background-section has-border-radius">
+                  <span class="fill pixel-animate-skill background-heading has-border-radius"
+                    data-pixel-width="92%"></span>
                 </div>
+              </div>
+            </div>
 
-                <div class="skills-inner w-100">
-                  <h6 class="pixel-title-award sm-title-block mb-5">React</h6>
+            <div
+              class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
+              <div class="box-img mr-15 v-dark background-section">
+                <img src="/img/skills/atom.png" alt="pixel-image" />
+              </div>
 
-                  <span class="number mb-5">80%</span>
+              <div class="skills-inner w-100">
+                <h6 class="pixel-title-award sm-title-block mb-5">React</h6>
 
-                  <div
-                    class="bar-progress background-section has-border-radius"
-                  >
-                    <span
-                      class="fill pixel-animate-skill background-heading has-border-radius"
-                      data-pixel-width="80%"
-                    ></span>
-                  </div>
+                <span class="number mb-5">80%</span>
+
+                <div class="bar-progress background-section has-border-radius">
+                  <span class="fill pixel-animate-skill background-heading has-border-radius"
+                    data-pixel-width="80%"></span>
                 </div>
               </div>
             </div>
@@ -399,10 +271,11 @@
         </div>
       </div>
     </div>
-    <!-- ==========  End Skill ========== -->
-    {{ partial "nextpage.html" . }}
   </div>
- 
+  <!-- ==========  End Skill ========== -->
+  {{ partial "nextpage.html" . }}
+</div>
+
 
 
 {{ end }}

@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partial "head.html" . }}
-  <body class="v-dark pixel-ajax">
-    
-    {{ partial "pageloader.html" . }}
-    <svg width="0" height="0" class="p-absolute hidden">
-      <defs>
-        <filter id="buttonFilter">
-          <feGaussianBlur
-            in="SourceGraphic"
-            stdDeviation="5"
-            result="blur"
-          ></feGaussianBlur>
-          <feColorMatrix
-            in="blur"
-            mode="matrix"
-            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-            result="buttonFilter"
-          ></feColorMatrix>
-          <feComposite
-            in="SourceGraphic"
-            in2="buttonFilter"
-            operator="atop"
-          ></feComposite>
-          <feBlend in="SourceGraphic" in2="buttonFilter"></feBlend>
-        </filter>
-      </defs>
-    </svg>
-    <main id="main_root" class="main-root">
-      {{ partial "navigation.html" . }}
-      <div id="pixel-scrollbar">
-        {{ block "main" . }}
-         {{ .Content | safeHTML }}
-        {{ end }}
-        {{ partial "footer.html" . }}
-      </div>
-    
-    
-    </main>
-   
-    {{ partial "cursor.html" . }}
-    {{ partial "script.html" . }}
-  </body>
+{{ partial "head.html" . }}
+
+<body class="v-dark pixel-ajax">
+
+  {{ partial "pageloader.html" . }}
+  <svg width="0" height="0" class="p-absolute hidden">
+    <defs>
+      <filter id="buttonFilter">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+          result="buttonFilter"></feColorMatrix>
+        <feComposite in="SourceGraphic" in2="buttonFilter" operator="atop"></feComposite>
+        <feBlend in="SourceGraphic" in2="buttonFilter"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+  <main id="main_root" class="main-root">
+    {{ partial "navigation.html" . }}
+    <div id="pixel-scrollbar">
+      {{ block "main" . }}
+      {{ .Content | safeHTML }}
+      {{ end }}
+      {{ partial "footer.html" . }}
+    </div>
+
+
+  </main>
+
+  {{ partial "cursor.html" . }}
+  {{ partial "script.html" . }}
+</body>
+
 </html>
