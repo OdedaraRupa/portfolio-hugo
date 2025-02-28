@@ -142,7 +142,7 @@
           <div class="pixel-btn pixel-btn-shape d-flex">
             <a class="button background-theme v-dark effect-ajax" href="/contact" data-pixel-text="Contact Us">
               <span class="title-btn text-upper p-relative z-index-1 heading-color" data-animate-text="Contact Us">
-                <span>Contact Us</span>
+                <span>Contact Me</span>
               </span>
             </a>
 
@@ -176,7 +176,7 @@
           <div class="content d-flex justify-content-between w-100">
             <div class="text">
               <h4 class="title-block text-upper mb-5">
-                {{ .Params.about_heading}}
+                {{ .Params.about_heading |safeHTML}}
               </h4>
               <span>{{ .Params.about_subheading }}</span>
             </div>
