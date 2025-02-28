@@ -1,9 +1,20 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://rupaben-odedara.netlify.app/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+title = 'Rupaben Odedara Portfolio'
 [params]
   customSCSS = ["css/_main.scss"]
+  footer_mail_work = "rupaben.odedara04@gmail.com"
+  footer_mail = "odedararupa35@gmail.com"
+  facebook = "https://www.facebook.com/rupa.odedara"
+  github = "https://github.com/OdedaraRupa"
+  linkedin = "https://www.linkedin.com/in/rupaben-odedara/"
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+
+  
+
+#Hugo version = 0.144.1
+
+
 
 # main menu
 
@@ -29,4 +40,18 @@ title = 'My New Hugo Site'
       name = "Portfolio"
       weight = 4
 
+    [[menu.footer]]
+      url = "/"
+      name = "Home"
+      weight = 1
+
+    [[menu.footer]]
+      url = "/contact/"
+      name = "Contact"
+      weight = 2
+      
+    [[menu.footer]]
+      url = "/about/"
+      name = "About"
+      weight = 3
    
