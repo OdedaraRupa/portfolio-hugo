@@ -1,26 +1,19 @@
 {{ define "main"}}
-<!-- 1920 * 1280 -->
+
 <!-- ========== Header ========== -->
-<header
-  class="header-page v-dark-head pixel-header-animation pb-80 pt-section p-relative"
->
-  <div
-    class="box-img h-100 w-100 h-100 p-absolute top-0 right-0"
-    data-overlay="7"
-  >
+<header class="header-page v-dark-head pixel-header-animation pb-80 pt-section p-relative">
+  <div class="box-img h-100 w-100 h-100 p-absolute top-0 right-0" data-overlay="7">
     <img class="cover-bg-img" src="/img/bg.svg" alt="pixel-image" />
   </div>
 
   <div class="p-relative container pixel-hero-parallax-title h-100">
     <div class="p-relative d-flex align-items-center w-100 h-100">
       <div class="box-content z-index-1">
-        <h1 class="title-lg text-upper">Recent work</h1>
+        <h1 class="title-lg text-upper">{{ .Params.header_title }}k</h1>
 
         <div class="contact-links w-50 mt-20">
           <p>
-            My creativity thrives in the digital world, where my swift
-            keystrokes transform mere ones and zeroes into seamless, engaging
-            experiences.
+            {{ .Params.header_text }}
           </p>
         </div>
       </div>
@@ -30,20 +23,15 @@
   <div class="footer-head w-100 p-relative mt-80 z-index-2">
     <div class="container d-flex justify-content-between">
       <div class="pixel-btn pixel-btn-shape rotate-icon d-flex">
-        <a class="button v-dark background-theme" href="#">
-          <span
-            class="title-btn text-upper p-relative z-index-1 heading-color"
-            data-animate-text="Scroll Down"
-          >
+        <a class="button v-dark background-theme" href="#page_wrapper">
+          <span class="title-btn text-upper p-relative z-index-1 heading-color" data-animate-text="Scroll Down">
             <span>Scroll Down</span>
           </span>
         </a>
 
         <span class="icon v-dark background-theme">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-            <path
-              d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"
-            ></path>
+            <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
           </svg>
         </span>
       </div>
@@ -51,33 +39,21 @@
       <div class="social-box d-flex align-items-center">
         <ul class="pixel-socials box-social">
           <li>
-            <a
-              href="https://www.facebook.com/rupa.odedara"
-              target="_blank"
-              class="background-section"
-            >
+            <a href="{{ .Site.Params.facebook}}" target="_blank" class="background-section">
               <i class="fab fa-facebook-f" aria-hidden="true"></i>
               <span>FB</span>
             </a>
           </li>
 
           <li>
-            <a
-              href="https://github.com/OdedaraRupa"
-              target="_blank"
-              class="background-section"
-            >
+            <a href="{{ .Site.Params.github}}" target="_blank" class="background-section">
               <i class="fab fa-github" aria-hidden="true"></i>
               <span>GIT</span>
             </a>
           </li>
 
           <li>
-            <a
-              href="https://www.linkedin.com/in/rupaben-odedara/"
-              target="_blank"
-              class="background-section"
-            >
+            <a href="{{ .Site.Params.linkedin }}" target="_blank" class="background-section">
               <i class="fab fa-linkedin" aria-hidden="true"></i>
               <span>LN</span>
             </a>
@@ -94,132 +70,85 @@
   <div class="our-work p-relative mb-section">
     <div class="p-relative box-image-parallax pixel-style-cards">
       <div class="root-posts has-filter">
-        <div
-          class="pixel-filtering z-index-1 p-relative w-100 mb-70 pt-50 pb-50 border-bottom"
-        >
+        <div class="pixel-filtering z-index-1 p-relative w-100 mb-70 pt-50 pb-50 border-bottom">
           <div class="filtering-t w-100">
             <div class="filtering-wrap w-100">
               <div class="filtering w-100">
                 <div class="container ">
-                  
+
                   <button class="active custom-button background-theme" data-filter="*" type="button">
                     All
                   </button>
-                  <button
-                    type="button"
-                    class="pixel-filter-category-production custom-button background-theme"
-                    data-filter=".business , .category-business"
-                  >
-                  Business
+                  <button type="button" class="pixel-filter-category-production custom-button background-theme"
+                    data-filter=".business , .category-business">
+                    Business
                   </button>
-                  <button
-                    type="button"
-                    class="pixel-filter-category-photography custom-button background-theme"
-                    data-filter=".educational , .category-educational"
-                  >
-                  Educational
+                  <button type="button" class="pixel-filter-category-photography custom-button background-theme"
+                    data-filter=".educational , .category-educational">
+                    Educational
                   </button>
-                  <button
-                    type="button"
+                  <button type="button"
                     class="sm-title-block pixel-filter-category-creative custom-button background-theme"
-                    data-filter=".e-Commerce , .category-e-Commerce"
-                  >
-                  E-Commerce
+                    data-filter=".e-Commerce , .category-e-Commerce">
+                    E-Commerce
                   </button>
-                  <button
-                    type="button"
+                  <button type="button"
                     class="sm-title-block pixel-filter-category-photography custom-button background-theme"
-                    data-filter=".technology , .category-technology"
-                  >
-                  Technology
+                    data-filter=".technology , .category-technology">
+                    Technology
                   </button>
-                  <button
-                  type="button"
-                  class="sm-title-block pixel-filter-category-creative custom-button background-theme"
-                  data-filter=".portfolio , .category-portfolio"
-                >
-                 Portfolio
+                  <button type="button"
+                    class="sm-title-block pixel-filter-category-creative custom-button background-theme"
+                    data-filter=".portfolio , .category-portfolio">
+                    Portfolio
                   </button>
-                  <button
-                  type="button"
-                  class="sm-title-block pixel-filter-category-production custom-button background-theme"
-                  data-filter=".development , .category-development"
-                >
-                  Development
+                  <button type="button"
+                    class="sm-title-block pixel-filter-category-production custom-button background-theme"
+                    data-filter=".development , .category-development">
+                    Development
                   </button>
                 </div>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
 
         <div class="container">
-          <div
-            class="pixel-posts hover-box-item d-grid grid-md-2 pixel-isotope use-filter v-dark-head"
-            data-pixel-gap="30px"
-          >
+          <div class="pixel-posts hover-box-item d-grid grid-md-2 pixel-isotope use-filter v-dark-head"
+            data-pixel-gap="30px">
             {{ range .Params.portfolio_article }}
             <article class='pixel-item-post grid-item over-hidden p-relative has-border-radius {{ .categories }}'>
               <div class="box-content d-flex">
                 <div class="img-cat w-100">
                   <div
                     class="box-image-bg w-100 over-hidden h-350 before-z-index pixel-swiper-parallax-transform p-relative"
-                    data-overlay="7"
-                  >
-                    <img
-                      src="{{ .image}}"
-                      class="cover-bg-img pixel-swiper-parallax-transform"
-                      alt="pixel-image"
-                    />
+                    data-overlay="7">
+                    <img src="{{ .image}}" class="cover-bg-img pixel-swiper-parallax-transform" alt="pixel-image" />
                   </div>
 
-                  <div
-                    class="cat background-main d-flex p-absolute top-0 right-0 z-index-1"
-                  >
-                    <svg
-                      class="top-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
+                  <div class="cat background-main d-flex p-absolute top-0 right-0 z-index-1">
+                    <svg class="top-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                      viewBox="0 0 100 100" xml:space="preserve">
+                      <path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path>
                     </svg>
-                    <svg
-                      class="bottom-svg"
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0"
-                      y="0"
-                      viewBox="0 0 100 100"
-                      xml:space="preserve"
-                    >
-                      <path
-                        d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"
-                      ></path>
+                    <svg class="bottom-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                      viewBox="0 0 100 100" xml:space="preserve">
+                      <path d="M98.1 0h1.9v51.9h-1.9c0-27.6-22.4-50-50-50V0h50z"></path>
                     </svg>
                     {{ range .tools}}
-                      <span class="background-section heading-color">{{ . }}</span>
+                    <span class="background-section heading-color">{{ . }}</span>
                     {{ end }}
-                   
-                   
+
+
                   </div>
                 </div>
 
                 <div
-                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0"
-                >
+                  class="post-content p-30 v-dark-head p-relative z-index-1 d-flex flex-column p-absolute w-100 bottom-0">
                   <div class="post-info">
                     <h2 class="post-title word-wrap d-inline-block title-block">
-                      <a
-                        href="{{ .link }}"
-                        class="effect-ajax init-color"
-                        data-pixel-ajax="work"> {{ .title | safeHTML}}</a
-                      >
+                      <a href="{{ .link }}" class="effect-ajax init-color" data-pixel-ajax="work"> {{ .title |
+                        safeHTML}}</a>
                     </h2>
                   </div>
                 </div>
@@ -227,9 +156,9 @@
             </article>
 
             {{ end }}
-           
 
-           
+
+
           </div>
         </div>
       </div>

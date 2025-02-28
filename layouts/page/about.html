@@ -1,30 +1,21 @@
 {{ define "main" }}
 <!-- ========== Header ========== -->
-<header
-  id="pixel_header"
-  class="p-relative header-normal section-padding pixel-header-animation"
->
+<header id="pixel_header" class="p-relative header-normal section-padding pixel-header-animation">
   <div class="bg-pattarn p-absolute left-0 bottom-0 opacity-5">
-    <div
-      class="p-relative"
-      data-pixel-animation='{"to":{"y":"20%","rotate":10},"responsive":["tablet","desktop"]}'
-    >
+    <div class="p-relative" data-pixel-animation='{"to":{"y":"20%","rotate":10},"responsive":["tablet","desktop"]}'>
       <img src="/img/bg-pattern-02.svg" alt="pixel-image" />
     </div>
   </div>
   <div class="p-relative container pixel-hero-parallax-title">
-    <div
-      class="p-relative Code & Design Studio-box d-flex flex-column justify-content-center background-inner"
-    >
+    <div class="p-relative Code & Design Studio-box d-flex flex-column justify-content-center background-inner">
       <div class="box-content d-grid grid-1-half z-index-1">
         <h2 class="title text-upper text-right">
-          I AM PASSIONATE ABOUT CREATING, LEARNING, AND GROWING CONSTANTLY
+          {{ .Params.header_title}}
         </h2>
         <div class="">
-          <h5 class="sub-heading">MY CREATIVE HUB</h5>
+          <h5 class="sub-heading"> {{ .Params.sub_heading}}</h5>
           <p class="description-box max-w350 mt-15">
-            I THRIVE ON SUCCESS, BRINGING INNOVATION TO LIFE THROUGH VERSATILE
-            DESIGN, BRANDING, AND CUTTING-EDGE TECHNOLOGY DEVELOPMENTWE
+            {{ .Params.header_text }}
           </p>
         </div>
       </div>
@@ -36,122 +27,77 @@
   <!-- ========== Award Scroll Right ========== -->
   <div class="img-under-header p-relative">
     <div class="pixel-marque p-relative h-100 over-hidden">
-      <div
-        class="pixel-grid-layout pixel-grid section-image section-move-image use-horizontal-scroll-image"
-        data-pixel-option='{"speed":1,"start":"100%","end":"0%","pin":false}'
-      >
+      <div class="pixel-grid-layout pixel-grid section-image section-move-image use-horizontal-scroll-image"
+        data-pixel-option='{"speed":1,"start":"100%","end":"0%","pin":false}'>
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc1.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc1.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc2.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc2.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc3.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc3.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc4.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc4.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc2.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc2.jpg" alt="pixel-image" />
           </div>
         </div>
       </div>
     </div>
 
     <div class="pixel-marque p-relative h-100 over-hidden mt-20">
-      <div
-        class="pixel-grid-layout pixel-grid section-image section-move-image use-horizontal-scroll-image move-left"
-        data-pixel-option='{"speed":1,"start":"100%","end":"0%","pin":false}'
-      >
+      <div class="pixel-grid-layout pixel-grid section-image section-move-image use-horizontal-scroll-image move-left"
+        data-pixel-option='{"speed":1,"start":"100%","end":"0%","pin":false}'>
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc1.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc1.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc2.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc2.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc3.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc3.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc4.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc4.jpg" alt="pixel-image" />
           </div>
         </div>
 
         <div class="grid-item">
           <div class="image-item h-100">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/img-arc3.jpg"
-              alt="pixel-image"
-            />
+            <img class="cover-bg-img has-border-radius" src="/img/img-arc3.jpg" alt="pixel-image" />
           </div>
         </div>
       </div>
     </div>
 
     <div
-      class="over-hidden box-text has-border-radius v-middle d-flex align-items-center justify-content-center text-center pixel-fill"
-    >
+      class="over-hidden box-text has-border-radius v-middle d-flex align-items-center justify-content-center text-center pixel-fill">
       <h2 class="title-lg">
         <span class="fw-200">Seamless</span> <br />
         Experience
@@ -161,9 +107,7 @@
   <!-- ========== End Award Scroll Right========== -->
 
   <!-- ========== award========== -->
-  <section
-    class="pixel-award section-padding section-margin background-section"
-  >
+  <section class="pixel-award section-padding section-margin background-section">
     <div class="container">
       <div class="box-text d-flex flex-column justify-content-center">
         <div class="section-title d-flex flex-column mb-70 pixel-fill">
@@ -172,77 +116,39 @@
             of experience
           </h2>
         </div>
+        {{ range .Params.expereince }}
         <div class="award-item p-relative pixel-up">
           <div class="d-grid grid-half-1">
             <div class="date">
               <i class="fa fa-calendar-alt"></i>
-              <span>Jan 2024 - May 2024</span>
+              <span>{{ .year}}</span>
             </div>
 
             <div class="d-flex justify-content-between">
               <div class="">
                 <h4 class="title-block mb-5">
-                  Cybersecurity & Risk Management Intern
+                 {{ .title }}
                 </h4>
-                <p>FundEvolove</p>
+                <p>{{ .company }}</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="award-item p-relative pixel-up">
-          <div class="d-grid grid-half-1">
-            <div class="date">
-              <i class="fa fa-calendar-alt"></i>
-              <span>May 2019 - May 2022</span>
-            </div>
+        {{ end }}
 
-            <div class="d-flex justify-content-between">
-              <div class="">
-                <h4 class="title-block mb-5">
-                  Web Developer / Front End Developer
-                </h4>
-                <p>Fatah Digital</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="award-item p-relative pixel-up">
-          <div class="d-grid grid-half-1">
-            <div class="date">
-              <i class="fa fa-calendar-alt"></i>
-              <span>July 2017 - June 2018</span>
-            </div>
-
-            <div class="d-flex justify-content-between">
-              <div class="">
-                <h4 class="title-block mb-5">Android Application Developer</h4>
-                <p>SKY 9 IT CRAFT</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="pixel-up">
           <div class="pixel-btn pixel-btn-shape d-flex">
-            <a
-              class="button background-theme v-dark effect-ajax"
-              href="contact.html"
-              data-pixel-text="Contact Us"
-            >
-              <span
-                class="title-btn text-upper p-relative z-index-1 heading-color"
-                data-animate-text="Contact Us"
-              >
-                <span>Contact Us</span>
+            <a class="button background-theme v-dark effect-ajax" href="/contact" data-pixel-text="Contact Us">
+              <span class="title-btn text-upper p-relative z-index-1 heading-color" data-animate-text="Contact Us">
+                <span>Contact Me</span>
               </span>
             </a>
 
             <span class="icon background-theme v-dark">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path
-                  d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"
-                ></path>
+                <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
               </svg>
             </span>
           </div>
@@ -265,38 +171,27 @@
       <div class="d-grid grid-lg-3 grid-md-2">
         <div class="team-item d-flex align-items-end">
           <div class="box-img">
-            <img
-              class="cover-bg-img has-border-radius"
-              src="/img/profile-long.jpg"
-              alt="Profile"
-            />
+            <img class="cover-bg-img has-border-radius" src="{{ .Params.profile }}" alt="Profile" />
           </div>
           <div class="content d-flex justify-content-between w-100">
             <div class="text">
               <h4 class="title-block text-upper mb-5">
-                Rupaben <br />
-                Odedara
+                {{ .Params.about_heading |safeHTML}}
               </h4>
-              <span>Web Develoepr</span>
+              <span>{{ .Params.about_subheading }}</span>
             </div>
             <div class="social-inner d-flex">
               <h6 class="theme-color">SOCIAL MEDIA</h6>
               <div class="social d-flex flex-column background-section">
-                <a href="https://github.com/OdedaraRupa" class="social-item">
+                <a href="{{ .Site.Params.github}}" class="social-item">
                   <i class="fab fa-github"></i>
                 </a>
 
-                <a
-                  href="https://www.facebook.com/rupa.odedara"
-                  class="social-item"
-                >
+                <a href="{{ .Site.Params.facebook}}" class="social-item">
                   <i class="fab fa-facebook"></i>
                 </a>
 
-                <a
-                  href="https://www.linkedin.com/in/rupaben-odedara/"
-                  class="social-item"
-                >
+                <a href="{{ .Site.Params.linkedin}}" class="social-item">
                   <i class="fab fa-linkedin"></i>
                 </a>
               </div>

@@ -30,15 +30,13 @@
           Navigation Links
         </h4>
         <ul>
-          <li class="text-upper">
-            <a href="/">home</a>
-          </li>
-          <li class="text-upper">
-            <a href="/contact">contact</a>
-          </li>
-          <li class="text-upper">
-            <a href="/about">About us</a>
-          </li>
+          {{ range .Site.Menus.footer }}
+            <li class="text-upper">
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        
+         
         </ul>
       </div>
 
@@ -51,13 +49,13 @@
 
           <p class="over-hidden mt-10">
             <strong>E</strong> :
-            <a class="link-hover" href="#"
-              data-hover-text="mailto:rupaben.odedara@gmail.com">rupaben.odedara@gmail.com</a>
+            <a class="link-hover" href="mailto:{{ .Site.Params.footer_mail_work }}"
+              data-hover-text="mailto:{{ .Site.Params.footer_mail_work }}">{{ .Site.Params.footer_mail_work }}</a>
           </p>
           <p class="over-hidden mt-10">
             <strong>E</strong> :
-            <a class="link-hover" href="#"
-              data-hover-text="mailto:rupaben.odedara@gmail.com">odedararupa35@gmail.com</a>
+            <a class="link-hover" href="mailto:{{ .Site.Params.footer_mail }}"
+              data-hover-text="mailto:{{ .Site.Params.footer_mail}}">{{ .Site.Params.footer_mail }}</a>
           </p>
         </div>
       </div>
@@ -67,6 +65,7 @@
           social Links
         </h4>
         <ul class="pixel-socials box-social">
+
           <li>
             <a href="https://github.com/OdedaraRupa" target="_blank" class="background-main">
               <i class="fab fa-github" aria-hidden="true"></i>
@@ -92,7 +91,7 @@
 
   <div class="copyright background-main">
     <div class="container d-flex align-items-center justify-content-between">
-      <p>© <span id="year"></span> Designed by Rupaben Odedara</p>
+      <p>© <span id="year"></span> Designed by Rupaben Odedara</p> 
 
       <div class="pixel-default-btn pixel-icon-heading-color">
         <a class="pixel-btn pixel-border border-color-default background-transparent image-zoom move-circle has-icon-left pixel-parallax-hover"

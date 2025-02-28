@@ -1,5 +1,7 @@
 ---
 title: "Portfolio"
+header_title: "Recent work"
+header_text: " My creativity thrives in the digital world, where my swift keystrokes transform mere ones and zeroes into seamless, engaging experiences."
 portfolio_article:
   - title: "Cardnet<br /> Digital Business Card <span class='fw-200'>© 2020</span>"
     image: "/img/portfolio/cardnet.jpg"

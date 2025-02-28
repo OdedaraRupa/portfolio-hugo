@@ -2,7 +2,7 @@
 
 
 <!-- ========== Header ========== -->
-<header id="pixel_header" class="header-personal v-dark-head pixel-header-animation h-100-v pixel-header-animation">
+<header id="pixel_header" class="header-personal v-dark-head pixel-header-animation h-100-v pixel-header-animation custom-header">
   <div class="bg-gradient p-absolute w-100 h-100 top-0 left-0"></div>
   <div class="p-relative pixel-hero-parallax-title h-100-v d-flex z-index-1">
     <div class="p-relative d-flex flex-column justify-content-center w-100 h-100">
@@ -11,11 +11,10 @@
           <h5 class="sub-heading">Hey — I'm</h5>
           <div class="box-img z-index-1 w-100 text-center"></div>
           <h1 class="title-lg clip is-full-width text-upper d-flex justify-content-center">
-            Rupa Odedara
+            {{ .Params.page_heading}}
           </h1>
           <p class="text-center text-align-center">
-            A digital designer with a passion for transforming ideas into
-            captivating visual experiences.
+            {{ .Params.page_text}}
           </p>
         </div>
       </div>
@@ -40,7 +39,7 @@
       </div>
 
       <div class="pixel-btn pixel-btn-shape d-flex">
-        <a class="button background-theme effect-ajax" href="contact.html" data-pixel-text="Contact Mes">
+        <a class="button background-theme effect-ajax" href="/contact" data-pixel-text="Contact Me">
           <span class="title-btn text-upper p-relative z-index-1 heading-color" data-animate-text="Contact Me">
             <span>Contact Me</span>
           </span>
@@ -68,18 +67,17 @@
             <span
               data-pixel-animation='{"from":{"paddingLeft":"10%"},"to":{"paddingLeft":"20%"},"responsive":["tablet","desktop"]}'>I
               AM</span>
-            <br />A DEDICATE WEB DEVELOEPR<br />
+            <br />{{ .Params.about_title}}<br />
           </h2>
 
           <p class="pixel-up">
-            and design and develop and enhance digital experiences through
-            innovative design, strategic thinking, and seamless functionality
+            {{ .Params.about_text}}
           </p>
 
           <div class="pixel-btn pixel-btn-shape mt-30 d-flex">
-            <a class="button background-theme effect-ajax" href="about.html">
-              <span class="title-btn p-relative z-index-1 heading-color" data-animate-text="ABOUT US">
-                <span>ABOUT US</span>
+            <a class="button background-theme effect-ajax" href="/about">
+              <span class="title-btn p-relative z-index-1 heading-color" data-animate-text="ABOUT">
+                <span>ABOUT Me</span>
               </span>
             </a>
 
@@ -110,57 +108,24 @@
   <section class="services-lest-hover not-filter pixel-filter p-relative section-margin">
     <div class="container">
       <div class="section-title mb-70 d-flex flex-column">
-        <span class="sub-heading mb-10 pixel-fill">My Expertise</span>
+        <span class="sub-heading mb-10 pixel-fill">{{ .Params.service_title }}</span>
 
         <h2 class="title pixel-fill">
-          Discover a Service That<br />
-          Fits Your Needs
+          {{ .Params.service_text | safeHTML }}
         </h2>
       </div>
     </div>
     <div class="container">
       <div class="pixel-cards">
         <div class="pixel-posts pixel-style-hover-list pixel-layout-fade-up" data-pixel-fx="2">
-          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-            data-img="/img/services/frontend.jpg">
+          {{ range .Params.service}}
+          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up" data-img="{{ .image }}">
             <h2 class="title">
-              <a href="#" class="effect-ajax">Front-End Development</a>
+              <a href="#" class="effect-ajax">{{.title}}</a>
             </h2>
-            <span class="number">01</span>
+            <span class="number">{{.number}}</span>
           </div>
-
-          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-            data-img="/img/services/app_development.jpg">
-            <h2 class="title">
-              <a href="#" class="effect-ajax">Web + App Development</a>
-            </h2>
-            <span class="number">02</span>
-          </div>
-
-          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-            data-img="/img/services/user_experience.png">
-            <h2 class="title">
-              <a href="#" class="effect-ajax">User Experience</a>
-            </h2>
-            <span class="number">03</span>
-          </div>
-
-          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-            data-img="/img/services/javascript.png">
-            <h2 class="title">
-              <a href="#" class="effect-ajax">JavaScript Frameworks</a>
-            </h2>
-            <span class="number">04</span>
-          </div>
-
-          <div class="item d-flex p-relative box-hover-image pixel-style-hover pixel-up"
-            data-img="/img/services/web_application_security.png">
-            <h2 class="title">
-              <a href="#" class="effect-ajax">Web Security & Best Practices
-              </a>
-            </h2>
-            <span class="number">05</span>
-          </div>
+          {{ end }}
 
           <div class="pixel-up d-inline-flex">
             <div class="pixel-btn pixel-btn-shape d-flex no-padding text-upper">
@@ -183,90 +148,37 @@
       <div class="d-grid grid-half-1">
         <div class="box-title d-flex flex-column justify-content-center">
           <div class="section-title d-flex flex-column">
-            <span class="sub-heading pixel-fill">TOOLS SECTION</span>
+            <span class="sub-heading pixel-fill">{{ .Params.skill_title }}</span>
 
             <h2 class="title pixel-fill">
-              TOOLS FOR <br />
-              MY CREATIVE WORK
+              {{ .Params.skill_text |safeHTML }}
             </h2>
           </div>
         </div>
 
         <div class="pixel-skills">
           <div class="d-grid grid-md-2 pixel-layout-fade-up">
+            {{ range .Params.skill }}
             <div
               class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
               <div class="box-img mr-15 v-dark background-section">
-                <img src="/img/skills/html-5.png" alt="pixel-image" />
+                <img src="{{ .image}}" alt="pixel-image" />
               </div>
 
               <div class="skills-inner w-100">
-                <h6 class="pixel-title-award sm-title-block mb-5">HTML</h6>
+                <h6 class="pixel-title-award sm-title-block mb-5">{{ .title}}</h6>
 
-                <span class="number mb-5">95%</span>
+                <span class="number mb-5">{{ .number }}</span>
 
                 <div class="bar-progress background-section has-border-radius">
                   <span class="fill pixel-animate-skill background-heading has-border-radius"
-                    data-pixel-width="95%"></span>
+                    data-pixel-width="{{ .number}}"></span>
                 </div>
               </div>
             </div>
 
-            <div
-              class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
-              <div class="box-img mr-15 v-dark background-section">
-                <img src="/img/skills/css-3.png" alt="pixel-image" />
-              </div>
+            {{ end }}
 
-              <div class="skills-inner w-100">
-                <h6 class="pixel-title-award sm-title-block mb-5">CSS</h6>
-
-                <span class="number mb-5">98%</span>
-
-                <div class="bar-progress background-section has-border-radius">
-                  <span class="fill pixel-animate-skill background-heading has-border-radius"
-                    data-pixel-width="98%"></span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
-              <div class="box-img mr-15 v-dark background-section">
-                <img src="/img/skills/folder.png" alt="pixel-image" />
-              </div>
-
-              <div class="skills-inner w-100">
-                <h6 class="pixel-title-award sm-title-block mb-5">
-                  JavaScript
-                </h6>
-
-                <span class="number mb-5">92%</span>
-
-                <div class="bar-progress background-section has-border-radius">
-                  <span class="fill pixel-animate-skill background-heading has-border-radius"
-                    data-pixel-width="92%"></span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="pixel-skills-item grid-item background-main has-border-radius p-10 d-flex align-items-center pixel-up">
-              <div class="box-img mr-15 v-dark background-section">
-                <img src="/img/skills/atom.png" alt="pixel-image" />
-              </div>
-
-              <div class="skills-inner w-100">
-                <h6 class="pixel-title-award sm-title-block mb-5">React</h6>
-
-                <span class="number mb-5">80%</span>
-
-                <div class="bar-progress background-section has-border-radius">
-                  <span class="fill pixel-animate-skill background-heading has-border-radius"
-                    data-pixel-width="80%"></span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
