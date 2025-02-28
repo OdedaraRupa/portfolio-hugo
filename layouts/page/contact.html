@@ -8,19 +8,19 @@
   <div class="p-relative container pixel-hero-parallax-title h-100">
     <div class="p-relative d-flex align-items-center w-100 h-100">
       <div class="box-content d-flex flex-column z-index-1">
-        <h1 class="title-lg text-upper">CONTACT US</h1>
+        <h1 class="title-lg text-upper">{{ .Params.title }}</h1>
 
         <div class="contact-links d-flex flex-column w-50 mt-50">
-          <a href="mailto:rupaben.odedara@gmail.com"
-            class="sm-title-block text-upper d-flex justify-content-between align-items-center">Rupaben.odedara@gmail.com
+          <a href="mailto:{{ .Site.Params.footer_mail_work}} "
+            class="sm-title-block text-upper d-flex justify-content-between align-items-center">{{ .Site.Params.footer_mail_work}} 
             <span class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
               </svg>
             </span>
           </a>
-          <a href="mailto:odedararupa35@gmail.com"
-            class="sm-title-block text-upper d-flex justify-content-between align-items-center">odedararupa35@gmail.com
+          <a href="mailto:{{ .Site.Params.footer_mail}} "
+            class="sm-title-block text-upper d-flex justify-content-between align-items-center">{{ .Site.Params.footer_mail}} 
             <span class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <path d="M328 96h24v288h-48V177.9L81 401l-17 17-33.9-34 17-17 223-223H64V96h264z"></path>
@@ -52,19 +52,19 @@
       <div class="social-box d-flex align-items-center">
         <ul class="pixel-socials box-social">
           <li>
-            <a href="https://www.facebook.com/rupa.odedara" target="_blank" class="background-main">
+            <a href="{{ .Site.Params.facebook }}" target="_blank" class="background-main">
               <i class="fab fa-facebook-f" aria-hidden="true"></i>
               <span>FB</span>
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/rupaben-odedara/" target="_blank" class="background-main">
+            <a href="{{ .Site.Params.linkedin }}" target="_blank" class="background-main">
               <i class="fab fa-linkedin" aria-hidden="true"></i>
               <span>L I</span>
             </a>
           </li>
           <li>
-            <a href="https://github.com/OdedaraRupa" target="_blank" class="background-main">
+            <a href="{{ .Site.Params.github }}" target="_blank" class="background-main">
               <i class="fab fa-github" aria-hidden="true"></i> <span>GIT</span>
             </a>
           </li>
