@@ -48,6 +48,7 @@
     --reverse-heading-color: #000;
     --bg-btn: #0a0909;
   }
+ 
 }
 :root {
   --body-font: "Poppins", sans-serif;
@@ -1079,7 +1080,7 @@ fieldset form input {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 20px;
   height: 40px;
   line-height: 1;
   border-radius: 30px;
@@ -2470,6 +2471,9 @@ a:hover, a:active {
 
 @media only screen and (max-width: 991px) {
   .footer-head {
+    display: unset;
+  }
+  .pixel-btn-shape .icon{
     display: none;
   }
 }
