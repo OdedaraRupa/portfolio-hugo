@@ -6,12 +6,12 @@ header_text: " I THRIVE ON SUCCESS, BRINGING INNOVATION TO LIFE THROUGH VERSATIL
 profile: "/img/profile-long.jpg"
 
 about_heading: "Rupaben <br /> Odedara"
-about_subheading: "Web Develoepr" 
+about_subheading: "IT Tech" 
 expereince: 
   - title: " Cybersecurity & Risk Management Intern"
     year: "Jan 2024 - May 2024"
     company: "FundEvolove"
-  - title: "Web Developer / Front End Developer"
+  - title: "System Administrator | Web Developer"
     year: "May 2019 - May 2022"
     company: "Fatah Digital"
   - title: "Android Application Developer Intern"
