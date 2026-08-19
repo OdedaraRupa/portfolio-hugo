@@ -2,8 +2,8 @@
 title: "Home"
 page_heading: "Rupaben Odedara"
 page_text: " A digital designer with a passion for transforming ideas into captivating visual experiences."
-about_title: "A DEDICATE WEB DEVELOEPR"
-about_text: " and design and develop and enhance digital experiences through innovative design, strategic thinking, and seamless functionality"
+about_title: "A am Power Platform Developer | Dynamics 365 CRM | Business Applications"
+about_text: "Building business solutions with Microsoft Power Platform, Dynamics 365, automation, and data."
 service_title: "My Expertise"
 service_text: " Discover a Service That<br />  Fits Your Needs"
 
