@@ -726,6 +726,7 @@ pixel-bg-pattern bg-square
   background-repeat: no-repeat;
   background-image: linear-gradient(var(--heading-color), var(--heading-color));
   background-size: 0 100%;
+  padding-bottom:20px;
 }
 
 .active-v-scroll .grid-item {
