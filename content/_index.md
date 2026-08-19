@@ -8,7 +8,7 @@ service_title: "My Expertise"
 service_text: " Discover a Service That<br />  Fits Your Needs"
 
 service: 
-  - title: "Front-End Development"
+  - title: "PowerApp Development"
     image: "/img/services/frontend.jpg"
     number: "1"
   - title: "Web + App Development"
